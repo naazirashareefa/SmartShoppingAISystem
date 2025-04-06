@@ -25,7 +25,8 @@ def get_product_details(product_id):
     try: 
         conn = sqlite3.connect(DB_PATH) 
         c = conn.cursor() 
-        c.execute("SELECT name, category, price, popularity_score FROM Products WHERE product_id = ?", (product_id,)) row = c.fetchone() 
+        c.execute("SELECT name, category, price, popularity_score FROM Products WHERE product_id = ?", (product_id,)) 
+        row = c.fetchone() 
         return row 
     except sqlite3.Error as e: 
         st.warning(f"Could not fetch product details: {e}") 
