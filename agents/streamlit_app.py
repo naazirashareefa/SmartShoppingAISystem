@@ -5,7 +5,7 @@ from database_setup import create_tables
 from simulator import seed_users, seed_products
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(file)) 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
 DB_PATH = os.path.join(BASE_DIR, '..', 'smart_shopping.db')
 
 def get_user_list(): 
