@@ -3,6 +3,7 @@ from recommend_utils import recommend_products_for_user
 import sqlite3
 
 DB_PATH = 'smart_shopping.db'
+conn = sqlite3.connect('smart_shopping.db')
 
 def get_user_list(): 
     conn = sqlite3.connect(DB_PATH) 
